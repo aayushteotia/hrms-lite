@@ -144,24 +144,24 @@ async function seedDatabase() {
     
     // Create Employees
     const emp1 = await storage.createEmployee({
-      name: "John Doe",
-      email: "john.doe@example.com",
+      name: "Ayush",
+      email: "ayush@example.com",
       department: "Engineering",
       role: "Software Engineer",
       joiningDate: "2023-01-15",
     });
 
     const emp2 = await storage.createEmployee({
-      name: "Jane Smith",
-      email: "jane.smith@example.com",
+      name: "Hrash",
+      email: "harsh@example.com",
       department: "HR",
       role: "HR Manager",
       joiningDate: "2023-03-10",
     });
 
     const emp3 = await storage.createEmployee({
-      name: "Alice Johnson",
-      email: "alice.j@example.com",
+      name: "Yash",
+      email: "yash@example.com",
       department: "Marketing",
       role: "Marketing Specialist",
       joiningDate: "2023-06-01",

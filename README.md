@@ -1,47 +1,129 @@
 # HRMS Lite
 
-A lightweight Human Resource Management System built with React, Node.js, and PostgreSQL.
+A full-stack Human Resource Management System built using React, Node.js, and PostgreSQL.  
+This application allows organizations to manage employee records, track attendance, and monitor real-time HR statistics through a responsive dashboard interface.
+
+---
 
 ## Features
 
-- **Employee Management**: Add, View, Update, and Delete employee records.
-- **Attendance Tracking**: Mark attendance (Present/Absent/Leave) and view history.
-- **Dashboard**: Real-time overview of total employees and daily attendance.
-- **Responsive Design**: Modern UI with sidebar navigation and mobile support.
+- Employee Management (Create, Read, Update, Delete)
+- Attendance Tracking (Present / Absent / Leave)
+- Real-time Dashboard Statistics
+- Responsive User Interface
+- RESTful API Architecture
+
+---
 
 ## Tech Stack
 
-- **Frontend**: React, Tailwind CSS, Shadcn UI, Recharts, Framer Motion
-- **Backend**: Node.js (Express), Drizzle ORM
-- **Database**: PostgreSQL
+### Frontend
+- React
+- Tailwind CSS
+- Shadcn UI
+- Recharts
+- Framer Motion
 
-## Setup Instructions
+### Backend
+- Node.js
+- Express.js
+- Drizzle ORM
 
-1. **Clone the repository** (if not already on Replit).
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-3. **Database Setup**:
-   - Ensure you have a PostgreSQL database provisioned.
-   - The `DATABASE_URL` environment variable must be set.
-   - Push the schema:
-     ```bash
-     npm run db:push
-     ```
-4. **Run the application**:
-   ```bash
-   npm run dev
-   ```
-   The application will start on port 5000.
+### Database
+- PostgreSQL
 
-## API Documentation
+---
 
-- `GET /api/employees`: List all employees
-- `POST /api/employees`: Create new employee
-- `POST /api/attendance`: Mark attendance
-- `GET /api/stats`: Dashboard statistics
+## Installation & Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone <your-repository-url>
+cd hrms-lite
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Configure Environment Variables
+
+Create a `.env` file in the root directory and add:
+
+```
+DATABASE_URL=your_postgresql_connection_string
+PORT=5000
+```
+
+### 4. Push Database Schema
+
+```bash
+npm run db:push
+```
+
+### 5. Start the Development Server
+
+```bash
+npm run dev
+```
+
+The application will run at:
+
+```
+http://localhost:5000
+```
+
+---
+
+## API Endpoints
+
+### Employee Routes
+
+```bash
+GET    /api/employees
+POST   /api/employees
+PUT    /api/employees/:id
+DELETE /api/employees/:id
+```
+
+### Attendance Routes
+
+```bash
+POST   /api/attendance
+GET    /api/attendance
+```
+
+### Dashboard Route
+
+```bash
+GET /api/stats
+```
+
+---
+
+## Project Structure
+
+```
+client/   → Frontend (React)
+server/   → Backend (Express API & database logic)
+shared/   → Shared schemas and types
+```
+
+---
+
+## Future Improvements
+
+- JWT Authentication
+- Role-Based Access Control (Admin / HR / Employee)
+- Leave Management System
+- Payroll Integration
+- Cloud Deployment
+
+---
 
 ## License
 
-MIT
+This project is licensed under the MIT License.
