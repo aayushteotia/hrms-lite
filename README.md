@@ -1,45 +1,105 @@
-# HRMS Lite
+# HRMS Lite – Full Stack Web Application
 
-A full-stack Human Resource Management System built using React, Node.js, and PostgreSQL.  
-This application allows organizations to manage employee records, track attendance, and monitor real-time HR statistics through a responsive dashboard interface.
+## 🚀 Live Application
+🔗 https://hrms-lite-kar2.onrender.com
 
----
-
-## Features
-
-- Employee Management (Create, Read, Update, Delete)
-- Attendance Tracking (Present / Absent / Leave)
-- Real-time Dashboard Statistics
-- Responsive User Interface
-- RESTful API Architecture
+## 📂 GitHub Repository
+🔗 https://github.com/aayushteotia/hrms-lite
 
 ---
 
-## Tech Stack
+## 📖 Project Overview
+
+HRMS Lite is a lightweight Human Resource Management System designed to manage employee records and track daily attendance.
+
+This project demonstrates end-to-end full-stack development including:
+
+- Frontend development
+- Backend API design
+- Database modeling
+- Server-side validation
+- Error handling
+- Production deployment
+
+The application simulates a basic internal HR tool with a clean, professional interface.
+
+---
+
+## 🛠 Tech Stack
 
 ### Frontend
 - React
+- TypeScript
+- Vite
 - Tailwind CSS
-- Shadcn UI
-- Recharts
-- Framer Motion
+- ShadCN UI Components
+- React Query
 
 ### Backend
 - Node.js
 - Express.js
-- Drizzle ORM
+- TypeScript
 
 ### Database
-- PostgreSQL
+- PostgreSQL (Neon Cloud Database)
+- Drizzle ORM
+
+### Deployment
+- Render (Full-stack hosting)
+- Neon (Cloud PostgreSQL)
 
 ---
 
-## Installation & Setup
+## ✨ Features
+
+### Employee Management
+- Add new employee
+- Unique Employee ID validation
+- Email format validation
+- Prevent duplicate records
+- View all employees
+- Delete employee
+
+### Attendance Management
+- Mark attendance (Present / Absent)
+- View attendance per employee
+- Persistent storage in PostgreSQL
+
+### Dashboard
+- Total employee count
+- Present today count
+- Professional UI layout
+
+### System Quality
+- RESTful APIs
+- Proper HTTP status codes
+- Graceful error handling
+- Production-ready build setup
+
+---
+
+## 📦 API Endpoints
+
+### Employees
+- `GET /api/employees`
+- `POST /api/employees`
+- `DELETE /api/employees/:id`
+
+### Attendance
+- `GET /api/employees/:id/attendance`
+- `POST /api/attendance`
+
+### Stats
+- `GET /api/stats`
+
+---
+
+## 🧪 How to Run Locally
 
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/aayushteotia/hrms-lite.git
 cd hrms-lite
 ```
 
@@ -54,14 +114,14 @@ npm install
 Create a `.env` file in the root directory and add:
 
 ```
-DATABASE_URL=your_postgresql_connection_string
+DATABASE_URL=<your_neon_database_url>
 PORT=5000
 ```
 
 ### 4. Push Database Schema
 
 ```bash
-npm run db:push
+npx drizzle-kit push
 ```
 
 ### 5. Start the Development Server
